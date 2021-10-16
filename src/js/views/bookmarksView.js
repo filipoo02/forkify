@@ -6,6 +6,10 @@ class BookmarksView extends View {
   _errorMessage = 'No bookmarks found!';
   _message = '';
 
+  addHandlerLoadBookmarks(handler) {
+    window.addEventListener('load', handler);
+  }
+
   _generateMarkup() {
     return this._data
       .map(bookmark => previevView.render(bookmark, false))

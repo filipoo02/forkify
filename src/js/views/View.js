@@ -70,7 +70,7 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
-  rednerMessage(msg = this._message) {
+  renderMessage(msg = this._message) {
     const markup = `
       <div class="message">
         <div>
