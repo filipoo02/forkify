@@ -19,6 +19,16 @@ class PaginationView extends View {
       this._data.results.length / this._data.resultsPerPage
     );
 
+    if (document.querySelector('.pagination__pages'))
+      document.querySelector('.pagination__pages').innerHTML = '';
+
+    this._parentElement.insertAdjacentHTML(
+      'afterend',
+      `<div class="pagination__pages">
+      <p >${curPage} of ${numPages}</p>
+      </div>`
+    );
+
     // 1) First page and there is other pages
     if (curPage === 1 && numPages > 1) {
       return `
