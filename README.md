@@ -1,6 +1,6 @@
 # forkify
 
-in progress
+Search for recipe, add your favorite one to bookmarks!
 
 ## Table of contents
 
@@ -21,4 +21,4 @@ Created in
 ## Setup
 
 To run this app you need to install npm packages
-`$ npm install`
+`$ npm install` and `$ npm start`
