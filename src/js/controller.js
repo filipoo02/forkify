@@ -24,7 +24,6 @@ const controlRecipe = async function () {
     recipeView.render(model.state.recipe);
     bookmarksView.update(model.state.bookmarks);
   } catch (error) {
-    console.log(error);
     recipeView.renderError();
   }
 };
@@ -42,7 +41,6 @@ const controlSearch = async function () {
     resultsView.render(model.getSearchResultsPage());
     paginationView.render(model.state.search);
   } catch (error) {
-    console.log(error);
     resultsView.renderError();
   }
 };
@@ -84,7 +82,6 @@ const controlAddRecipe = async function (newRecipe) {
 
     bookmarksView.render(model.state.bookmarks);
 
-    console.log(model.state.recipe.id);
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
   } catch (error) {
     addRecipeView.renderError(error.message);

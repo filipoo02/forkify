@@ -8,7 +8,6 @@ class RecipeView extends View {
   _message = '';
 
   addHandlerAddBookmark(handler) {
-    // btn--bookmark
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--bookmark');
       if (!btn) return;
