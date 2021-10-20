@@ -2,6 +2,8 @@
 
 Search for recipe, add your favorite one to bookmarks!
 
+https://forkify-fs.netlify.app/
+
 ## Table of contents
 
 - [General info](#general-info)
