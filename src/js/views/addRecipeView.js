@@ -4,6 +4,7 @@ import View from './View';
 class AddRecipeView extends View {
   _parentElement = document.querySelector('.upload');
   _message = 'Recipe has been successfully uploaded!';
+  _errorElement = document.querySelector('.error-recipe-view');
 
   _window = document.querySelector('.add-recipe-window');
   _overlay = document.querySelector('.overlay');
@@ -14,6 +15,22 @@ class AddRecipeView extends View {
     super();
     this._addHandlerShowWindow();
     this._addHandlerHideWindow();
+  }
+
+  renderError(msg = this._errorMessage) {
+    this._clear();
+    const markup = `
+        <div>
+          <svg>
+            <use href="${icons}#icon-alert-triangle"></use>
+          </svg>
+        </div>
+        <p>${msg}</p>`;
+    this._errorElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
+  _clear() {
+    this._errorElement.innerHTML = '';
   }
 
   toggleWindow() {
